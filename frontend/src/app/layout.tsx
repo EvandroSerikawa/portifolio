@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import BotaoChat from "@/components/chat/BotaoChat";
 
 export const metadata: Metadata = {
   title: "Portifólio Digital",
@@ -8,21 +9,23 @@ export const metadata: Metadata = {
 };
 
 const fonte = Montserrat({
-  subsets:["latin"],
-})
+  subsets: ["latin"],
+});
+
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode
 }>) {
-  return (
-    <html lang="enpt-BR">
-      <body
-        className={`${fonte.className} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="pt-BR">
+			<body className={`${fonte.className} antialiased`}>
+				{children}
+				<div className="botaoChat">
+					<BotaoChat/>
+				</div>
+			</body>
+		</html>
+	)
 }
