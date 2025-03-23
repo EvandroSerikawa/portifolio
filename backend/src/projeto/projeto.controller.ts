@@ -2,7 +2,7 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { ProjetoPrisma } from './projeto.prisma';
 import { Projeto } from '@core'
 
-@Controller('projeto')
+@Controller('projetos')
 export class ProjetoController {
         constructor(private readonly repo: ProjetoPrisma){}
 

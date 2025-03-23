@@ -1,0 +1,6 @@
+
+
+GET http://localhost:300/tecnologias
+
+###
+GET http://localhost:300/tecnologias/destaque
